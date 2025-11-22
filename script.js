@@ -562,7 +562,6 @@ function handleFormSubmit(event) {
         }, 50);
     }
 }
-}
 
 
 /**
