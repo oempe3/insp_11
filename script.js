@@ -170,8 +170,8 @@ function updateCompletionStatus() {
 // ============ GERAÇÃO DE HTML DO FORMULÁRIO (FUNÇÕES CRÍTICAS INSERIDAS) ============
 
 /**
- * Cria o HTML para um único campo de formulário com base na sua configuraç
-
+ * Cria o HTML para um único campo de formulário com base na sua configuração
+ */
 function createFieldHTML(fieldConfig, currentValue) {
     const fieldId = `${currentWindowId}-${fieldConfig.name}`;
     const value = currentValue !== undefined && currentValue !== null ? currentValue : (fieldConfig.default || '');
@@ -332,15 +332,6 @@ function createFieldHTML(fieldConfig, currentValue) {
     `;
 }
 
-     ${indicatorHTML}
-                ${labelText}
-                ${unitHTML}
-            </label>
-            <div class="input-wrapper">${inputHTML}</div>
-            ${helpHTML}
-        </div>
-    `;
-}
 
 /**
  * Gera o formulário para a janela (modal) e o exibe.
@@ -561,6 +552,7 @@ function handleFormSubmit(event) {
             }
         }, 50);
     }
+}
 }
 
 
